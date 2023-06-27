@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:url(https://c4.wallpaperflare.com/wallpaper/487/48/975/vision-mercedes-maybach-6-4k-8k-car-mercedes-benz-red-car-wallpaper-preview.jpg)">
+    <h1 style="color: crimson;">testing stuff out</h1>
+    <button style="color: crimson; background-color: rgb(7, 247, 255);" onclick="save()">save data</button>
+    <p id="msg"></p>
+    <script>
+        function save(){
+            var userPreference;
+            if(confirm("u wanna save changes?" )==true)
+            {
+                userPreference="data successfully saved";   
+            }
+            else{
+                userPreference="save cancelled lol";
+            }
+            document.getElementById("msg").innerHTML=userPreference;
+        }
+        function myinput(){
+            var name= prompt("enter your name pls");
+            if(name==null||name==""){
+                document.getElementById("msg2").innerHTML="you didnt enter anything ,enter again";
+            }
+            else{
+                document.getElementById("msg2").innerHTML="you entered this:"+name;
+            }
+        }
+    </script>
+</body>
+</html>
