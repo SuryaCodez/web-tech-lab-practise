@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: rgb(220, 20, 60);">check this out</h1>
+    <button style="color: crimson;" onClick="myinput()">click button</button>
+    <p id="msg"></p>
+    <script>
+        function myinput(){
+            var name= prompt("enter your name pls");
+            if(name==null||name==""){
+                document.getElementById("msg").innerHTML="you didnt enter anything please enter again";
+            }
+            else{
+                document.getElementById("msg").innerHTML="entered name is:"+name;
+            }
+        }
+    </script>
+</body>
+</html>
