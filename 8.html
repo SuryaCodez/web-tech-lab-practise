@@ -1,65 +1,68 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>number in words</title>
-        <script language="javascript">
-            function convert()
-            {
-                var num=document.forms["frm1"].num.value;
-                document.forms["frm1"].words.value="";
-                if(isNan(num))
-                {
-                    alert("not a number");
-                }
-                else if(num<0||num>999)
-                {
-                    alert("out of range");
-                }
-                else
-                {
-                    var len=num.length;
-                    var words="";
-                    for(var i=0;i<len;i++)
-                    {
-                        var n=num.substr(i,1);
-                        switch(n)
-                        {
-                            case '0':words+="zero";
+<head>
+    <title>number in words</title>
+    <script language="javascript">
+        function convert() {
+            var num = document.forms["frm1"].num.value;
+            document.forms["frm1"].words.value = "";
+            
+            if (isNaN(num)) {
+                alert("not a number");
+            } else if (num < 0 || num > 999) {
+                alert("out of range");
+            } else {
+                var len = num.length;
+                var words = "";
+                
+                for (var i = 0; i < len; i++) {
+                    var n = num.substr(i, 1);
+                    switch (n) {
+                        case '0':
+                            words += "zero";
                             break;
-                            case '1':words+="one";
+                        case '1':
+                            words += "one";
                             break;
-                            case '2':words+="two";
+                        case '2':
+                            words += "two";
                             break;
-                            case '3':words+="three";
+                        case '3':
+                            words += "three";
+                            break; // Missing semicolon
+                        case '4':
+                            words += "four";
                             break;
-                            case '4':words+="four";
+                        case '5':
+                            words += "five";
                             break;
-                            case '5':words+="five";
+                        case '6':
+                            words += "six";
                             break;
-                            case '6':words+="six";
+                        case '7':
+                            words += "seven";
                             break;
-                            case '7':words+="seven";
+                        case '8':
+                            words += "eight";
                             break;
-                            case '8':words+="eight";
-                            break;
-                            default:words+="nine";
-                        }
+                        default:
+                            words += "nine";
                     }
-                    document.forms["frm1"].words.value=words;
                 }
-
+                document.forms["frm1"].words.value = words;
             }
-        </script>
-    </head>
-    <body>
-        <form name="frm1">
-            <center><h3>number in words</h3></center>
-            <br/>
-            <
-            <center>enter a number:<input type="text" name="num"</input><br/></center>
-            <br/>
-            <center><input type="button" name="inwords" value="in words" onclick="convert()"></input></center>
-            <br/><br/><center>number in words:<input type="text" name="words"</input></center>
-            <br/>
-        </form>
-    </body>
+        }
+    </script>
+</head>
+<body>
+    <form name="frm1">
+        <center><h3>number in words</h3></center>
+        <br/>
+        <center>enter a number:<input type="text" name="num"></input><br/></center> <!-- Fixed the closing input tags -->
+        <br/>
+        <center><input type="button" name="inwords" value="In Words" onclick="convert()"></center>
+        <br/><br/><center>number in words:<input type="text" name="words"></input></center> <!-- Fixed the closing input tags -->
+        <br/>
+    </form>
+</body>
 </html>
